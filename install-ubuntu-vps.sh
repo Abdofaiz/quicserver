@@ -167,7 +167,7 @@ type VPNClient struct {
 }
 
 type VPNServer struct {
-	listener quic.Listener
+	listener *quic.Listener
 	clients  map[string]*VPNClient
 	mutex    sync.RWMutex
 	ipPool   *IPPool
